@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Query</title>
+    <link rel="stylesheet" href="estilos/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="estilos/media-query.css">
+</head>
+<body onresize="tamanhoTela()">
+    <header>
+        <h1>Meu Site</h1>
+        <span id="burguer" class="material-icons" onclick="clickMenu()">menu</span>
+        <menu id="opcoes">
+            <ul>
+                <li><a href="">Opção 1</a></li>
+                <li><a href="">Opção 2</a></li>
+                <li><a href="">Opção 3</a></li>
+                <li><a href="">Opção 4</a></li>
+                <li><a href="">Opção 5</a></li>
+            </ul>
+        </menu>
+    </header>
+    <main>
+        <article>
+            <h2>Testando Media Queries</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste reprehenderit ratione inventore! Voluptas ut, blanditiis dicta architecto dolor sed eius cumque enim, quisquam excepturi tempora iste? In illo asperiores officiis.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero dolorum quae distinctio cumque! Alias officia sint voluptate commodi iusto mollitia natus praesentium eos quam nemo, quod deleniti explicabo non temporibus?</p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut repellat eveniet at, accusantium molestiae minus debitis animi eaque deleniti atque aut magnam quam! Vitae laborum voluptatum illo tempore, doloribus ipsa!</p>
+        </article>
+    </main>
+    <script>
+        function tamanhoTela() {
+            if (window.innerWidth >= 768) {
+                opcoes.style.display = 'block'
+            } else {
+                opcoes.style.display = 'none'
+            }
+
+        }
+
+        function clickMenu() {
+            if (opcoes.style.display == 'block') {
+                opcoes.style.display = 'none'
+            } else {
+                opcoes.style.display = 'block'
+            }
+        }
+    </script>
+</body>
+</html>
